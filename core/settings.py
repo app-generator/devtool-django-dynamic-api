@@ -39,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.home'  # Enable the inner home (home)
+    'apps.home', # Enable the inner home (home)
+    'rest_framework',
+    'apps.dyn_api',
+    'apps'
 ]
 
 MIDDLEWARE = [
@@ -146,3 +149,11 @@ STATICFILES_DIRS = (
 
 #############################################################
 #############################################################
+DYNAMIC_API = {
+    # pattern:
+    'endpoint': 'Model',
+
+    'people': "People",
+    'books': "Book",
+    'sales': "Sales",
+}

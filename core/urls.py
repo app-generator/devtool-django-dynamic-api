@@ -7,6 +7,7 @@ from django.contrib import admin
 from django.urls import path, include  # add this
 
 urlpatterns = [
+    path('', include('apps.dyn_api.urls')),
     path('admin/', admin.site.urls),          # Django admin route
     path("", include("apps.authentication.urls")), # Auth routes - login / register
 

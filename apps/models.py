@@ -39,7 +39,7 @@ class People(models.Model):
     # following two lines is required for all models in this file because models defines outside of app
     # https://docs.djangoproject.com/en/4.0/ref/models/options/#app-label
     class Meta:
-        app_label = 'dyn_datatables'
+        app_label = 'apps'
 
     name = models.CharField(max_length=50)
     age = models.IntegerField()
@@ -47,7 +47,7 @@ class People(models.Model):
 
 class Book(models.Model):
     class Meta:
-        app_label = 'dyn_datatables'
+        app_label = 'apps'
 
     title = models.CharField(max_length=100)
     year = models.IntegerField(default=2020)
@@ -56,7 +56,7 @@ class Book(models.Model):
 
 class Sales(models.Model):
     class Meta:
-        app_label = 'dyn_datatables'
+        app_label = 'apps'
 
     product = models.CharField(max_length=100)
     purchase_date = models.DateField(default=datetime.datetime.now())
